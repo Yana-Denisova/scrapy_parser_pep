@@ -17,7 +17,7 @@ class PepParsePipeline:
             self.pep_types[current_status] = self.pep_types.get(
                 current_status, 0) + 1
             return item
-        except Exception:
+        except KeyError:
             raise DropItem
 
     def close_spider(self, spider):
