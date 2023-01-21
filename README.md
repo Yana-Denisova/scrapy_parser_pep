@@ -3,9 +3,7 @@
 
 ## Описание проекта
 Парсер документации Python на базе фреймворка Scrapy c сайта https://www.python.org/
-- текущие статусы всех стандартов PEP;
-- авторы;
-- количество PEP в каждом статусе.
+Проект позволяет получать список всех PEP для Python и информацию по статусам и количеству PEP, с записью полученной информации в файлы.
 
 
 ## Содержание
@@ -20,18 +18,32 @@
 
 
 ## Использование
-Склонируйте репозиторий  
-Создайте виртуальное окружение 
+
+Перед запуском необходимо склонировать проект:
+```bash
+HTTPS: git clone https://github.com/Yana-Denisova/scrapy_parser_pep.git
+SSH: git clone git@github.com:Yana-Denisova/scrapy_parser_pep.git
 ```
+
+Cоздать и активировать виртуальное окружение:
+```bash
 python -m venv venv
 ```
-Активируйте виртуальное окружение  
-Установите зависимости 
+```bash
+Linux: source venv/bin/activate
+Windows: source venv/Scripts/activate
 ```
+
+И установить зависимости из файла requirements.txt:
+```bash
+python3 -m pip install --upgrade pip
+```
+```bash
 pip install -r requirements.txt
 ```
-Запустите парсинг
-```
+
+Для запуска парсера необходимо выполнить команду:
+```bash
 scrapy crawl pep
 ```
 
